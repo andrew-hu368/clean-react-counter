@@ -24,7 +24,7 @@ export const limitedDecrement: (
   count: number,
   lowerBound?: number,
   amount?: number
-) => number = (count, lowerBound = Infinity, amount = 1) =>
+) => number = (count, lowerBound = -Infinity, amount = 1) =>
   count > lowerBound ? decrement(count, amount) : lowerBound;
 
 export const limitedIncrementWithMessage: (
